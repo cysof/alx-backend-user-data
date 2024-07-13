@@ -1,20 +1,17 @@
 #!/usr/bin/env python3
-
-""" UserSession module for the API
+""" UserSession module
 """
-
 from models.base import Base
-from datetime import datetime
 
 
 class UserSession(Base):
     """
-    UserSession model that inherits from Base
+    UserSession class
     """
 
     def __init__(self, *args: list, **kwargs: dict):
         """
-        Initialize the UserSession instance
+        Initialize a UserSession instance
         """
         super().__init__(*args, **kwargs)
         self.user_id = kwargs.get('user_id')
